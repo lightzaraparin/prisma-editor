@@ -18,7 +18,7 @@ const Header = ({
   users?: Message["sender"][];
 }) => {
   return (
-    <header className="border-b border-slate-200 bg-white text-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">
+    <header className="border-b border-evelan-secondary/20 bg-white text-slate-900 dark:border-evelan-secondary dark:bg-slate-900 dark:text-slate-200">
       <div className="mx-auto max-w-7xl">
         <div className="relative flex h-16 items-center justify-between px-4">
           <div className="flex flex-1 items-center sm:justify-start">
@@ -30,7 +30,7 @@ const Header = ({
                 })}
               >
                 <Icons.logo />
-                <h1 className="text-lg font-bold">Prisma Editor</h1>
+                <h1 className="text-lg font-bold">Evelan Prisma Editor</h1>
               </Link>
 
               {users && (
@@ -69,8 +69,8 @@ const Header = ({
                 </>
               )}
               <p className="sr-only">
-                Prisma Editor: Prisma Schema Editor, Prisma Schema
-                visualization, visualize and edit Prisma schemas.
+                Evelan Prisma Editor: Professional Prisma Schema Editor and visualization tool. 
+                Visualize and edit Prisma schemas with ease.
               </p>
             </div>
           </div>

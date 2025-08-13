@@ -2,9 +2,9 @@ import "~/styles/globals.css";
 import Providers from "./providers";
 
 export const metadata = {
-  title: "Prisma Editor | Visualize and Edit Prisma Schemas",
+  title: "Evelan Prisma Editor | Visualize and Edit Prisma Schemas",
   description:
-    "Prisma Editor: Prisma Schema Editor, Prisma Schema visualization, visualize and edit Prisma schemas.",
+    "Evelan Prisma Editor: Professional Prisma Schema Editor and visualization tool. Visualize and edit Prisma schemas with ease.",
 };
 
 export default function RootLayout({

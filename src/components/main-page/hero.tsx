@@ -12,14 +12,14 @@ export default function Hero() {
       <div className="mx-auto pt-12 text-center lg:pt-16 xl:pt-24">
         <div>
           <h2 className="mx-auto max-w-3xl whitespace-pre-wrap text-center text-2xl font-extrabold leading-tight tracking-tight md:text-3xl lg:text-4xl xl:text-5xl">
-            A powerful tool to visualize and edit Prisma Schema with ease.
+            Professional Prisma Schema Editor by Evelan GmbH
           </h2>
           <p className="mx-auto max-w-[60ch] pt-3 text-center text-sm font-medium text-zinc-600 dark:text-zinc-300 md:text-lg">
-            Get real-time visualization and editing capabilities for your Prisma
-            schema.
+            Powerful visualization and editing capabilities for your Prisma schemas. 
+            Built for growth-oriented businesses and professional developers.
           </p>
           <h1 className="sr-only">
-            Prisma Editor
+            Evelan Prisma Editor
           </h1>
           <h1 className="sr-only">
             Prisma Schema
@@ -49,8 +49,8 @@ export default function Hero() {
             Prisma schema generator
           </h1>
           <p className="sr-only">
-            Prisma Editor: Prisma Schema Editor, Prisma Schema visualization,
-            visualize and edit Prisma schemas.
+            Evelan Prisma Editor: Professional Prisma Schema Editor and visualization tool. 
+            Visualize and edit Prisma schemas with ease.
           </p>
           <div className="mt-6 flex items-center justify-center gap-4 ">
             <p className="sr-only">
@@ -73,13 +73,13 @@ export default function Hero() {
                   className="lg:text-lg"
                   onClick={() => signIn("github", { callbackUrl: "/schema" })}
                 >
-                  Login
+                  Get Started
                   <Icons.arrowRight size={20} strokeWidth={3} />
                 </Button>
               ) : (
                 <Link href="/schema">
                   <Button variant="primary" className="lg:text-lg">
-                    My schemas
+                    My Schemas
                     <Icons.arrowRight size={20} strokeWidth={3} />
                   </Button>
                 </Link>

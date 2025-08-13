@@ -3,36 +3,36 @@ import { Icons } from "../ui/icons";
 
 const features = [
   {
-    title: "Real-time visualization",
+    title: "Professional Visualization",
     description:
-      "See your database structures in real-time as you create, modify and maintain them!",
+      "Enterprise-grade database structure visualization with real-time updates for professional development teams.",
     icon: <Icons.arrowLeftRight className="h-6 w-6" />,
-    color: "bg-brand-indigo-2 text-white",
+    color: "bg-evelan-primary text-white",
   },
   {
-    title: "Direct schema editing",
-    description: "Edit your Prisma Schema directly from the graph!",
+    title: "Intuitive Schema Editing",
+    description: "Professional schema editing interface designed for business applications and growth-oriented development.",
     icon: <Icons.mouseClick className="h-6 w-6" />,
-    color: "bg-brand-teal-2 text-white",
+    color: "bg-evelan-accent text-white",
   },
   {
-    title: "Share your schema.",
-    description: "Share your schema with a link and collaborate!",
+    title: "Team Collaboration",
+    description: "Share schemas seamlessly with your development team for efficient collaboration and project management.",
     icon: <Icons.share className="h-6 w-6" />,
-    color: "bg-brand-light text-white",
+    color: "bg-evelan-secondary text-white",
   },
   {
-    title: "User-friendly interface",
-    description: "Intuitive interface for easy schema editing and management!",
+    title: "Business-Focused Interface",
+    description: "Professional interface optimized for business applications and enterprise development workflows.",
     icon: <Icons.happy className="h-6 w-6" />,
-    color: "bg-brand-blue text-white",
+    color: "bg-evelan-success text-white",
   },
   {
-    title: "OpenAI integration",
+    title: "AI-Powered Generation",
     description:
-      "Use natural language prompts to generate boilerplate schema code with the power of OpenAI's natural language processing API!",
+      "Leverage OpenAI integration for intelligent schema generation, perfect for rapid prototyping and business application development.",
     icon: <Icons.gpt className="h-6 w-6" />,
-    color: "bg-brand-darker text-white",
+    color: "bg-evelan-warning text-white",
   },
 ];
 

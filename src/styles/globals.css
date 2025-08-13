@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --color-panel-background: #1e1e1e;
-  --color-solid-resize-bar-handle: #2d3748;
+  --color-panel-background: #1e293b;
+  --color-solid-resize-bar-handle: #3b82f6;
 }
 
 .zoompanflow {
@@ -25,8 +25,8 @@
 }
 
 .react-flow__controls-button {
-  background: #1a202c !important;
-  border-bottom: 1px solid #2d3748 !important;
+  background: #1e293b !important;
+  border-bottom: 1px solid #3b82f6 !important;
   color: white !important;
   fill: white !important;
 }
@@ -39,22 +39,22 @@
 
 .react-flow__attribution {
   font-size: 10px;
-  background: #1a202c !important;
+  background: #1e293b !important;
   padding: 0 4px !important;
 }
 
 .react-flow__node.selected > div {
-  @apply border-slate-900 dark:border-white;
+  @apply border-evelan-primary dark:border-evelan-accent;
 }
 
 .dots {
-  background: linear-gradient(180deg, transparent 0, #f1f5f9 300px),
-    fixed 0 0 /20px 20px radial-gradient(#6b6b6b 1px, transparent 0),
-    fixed 10px 10px /20px 20px radial-gradient(#6b6b6b 1px, transparent 0);
+  background: linear-gradient(180deg, transparent 0, #f8fafc 300px),
+    fixed 0 0 /20px 20px radial-gradient(#64748b 1px, transparent 0),
+    fixed 10px 10px /20px 20px radial-gradient(#64748b 1px, transparent 0);
 }
 
 .dark .dots {
-  background: linear-gradient(180deg, transparent 0, #161616 300px),
-    fixed 0 0 /20px 20px radial-gradient(#6b6b6b 1px, transparent 0),
-    fixed 10px 10px /20px 20px radial-gradient(#6b6b6b 1px, transparent 0);
+  background: linear-gradient(180deg, transparent 0, #0f172a 300px),
+    fixed 0 0 /20px 20px radial-gradient(#64748b 1px, transparent 0),
+    fixed 10px 10px /20px 20px radial-gradient(#64748b 1px, transparent 0);
 }

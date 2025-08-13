@@ -6,17 +6,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        edge: "#5c7194",
-        modal: "#1A202C",
-        "brand-darker": "#1A202C",
-        "brand-dark": "#2D3748",
-        "brand-light": "#2a4076",
-        "brand-lighter": "#4569c2",
-        "brand-indigo-1": "#5a67d8",
-        "brand-indigo-2": "#4c51bf",
-        "brand-teal-1": "#16A394",
-        "brand-teal-2": "#187367",
-        "brand-blue": "#2c7ad6",
+        // Evelan GmbH Brand Colors
+        edge: "#1e3a8a", // Deep blue for edges and borders
+        modal: "#0f172a", // Dark slate for modals
+        "brand-darker": "#0f172a", // Darkest brand color
+        "brand-dark": "#1e293b", // Dark brand color
+        "brand-light": "#3b82f6", // Primary blue
+        "brand-lighter": "#60a5fa", // Lighter blue
+        "brand-indigo-1": "#4f46e5", // Indigo accent
+        "brand-indigo-2": "#6366f1", // Lighter indigo
+        "brand-teal-1": "#0d9488", // Teal accent for growth
+        "brand-teal-2": "#14b8a6", // Lighter teal
+        "brand-blue": "#2563eb", // Primary brand blue
+        // Additional Evelan colors
+        "evelan-primary": "#1e40af", // Deep blue from Evelan site
+        "evelan-secondary": "#64748b", // Professional gray
+        "evelan-accent": "#0ea5e9", // Bright blue accent
+        "evelan-success": "#059669", // Success green
+        "evelan-warning": "#d97706", // Warning orange
+        "evelan-error": "#dc2626", // Error red
       },
       keyframes: {
         "accordion-down": {
