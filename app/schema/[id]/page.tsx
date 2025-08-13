@@ -7,6 +7,9 @@ import { SchemaHeader } from "./components/schema-header";
 import { getSchemaAsUpdate } from "./doc-utils";
 import { redirect } from "next/navigation";
 
+// Force dynamic rendering for this route
+export const dynamic = 'force-dynamic';
+
 const demoRoomId = -1;
 
 const Schema = async ({
@@ -16,12 +19,13 @@ const Schema = async ({
   params: { id: string };
   searchParams: { token: string };
 }) => {
-  const id = +params.id;
-  const isDemoRoom = id === demoRoomId;
-  const session = await getServerSession(authOptions);
-  if (!session && !isDemoRoom) {
-    redirect("/api/auth/signin");
-  }
+  try {
+    const id = +params.id;
+    const isDemoRoom = id === demoRoomId;
+    const session = await getServerSession(authOptions);
+    if (!session && !isDemoRoom) {
+      redirect("/api/auth/signin");
+    }
 
   let doc = await prisma.schema.findUnique({
     where: { id },
@@ -103,18 +107,22 @@ const Schema = async ({
     });
   }
 
-  return (
-    <div className="h-screen overflow-hidden">
-      <YDocProvider
-        yDocUpdate={doc.YDoc!}
-        room={id}
-        isViewOnly={!isOwner && doc.shareSchema?.permission === "VIEW"}
-      >
-        <SchemaHeader />
-        <Panels />
-      </YDocProvider>
-    </div>
-  );
+    return (
+      <div className="h-screen overflow-hidden">
+        <YDocProvider
+          yDocUpdate={doc.YDoc!}
+          room={id}
+          isViewOnly={!isOwner && doc.shareSchema?.permission === "VIEW"}
+        >
+          <SchemaHeader />
+          <Panels />
+        </YDocProvider>
+      </div>
+    );
+  } catch (error) {
+    console.error('Error loading schema:', error);
+    return <div>Error loading schema. Please try again.</div>;
+  }
 };
 
 export default Schema;
