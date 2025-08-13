@@ -24,6 +24,14 @@ const ShareSchemaDialogContent: FC<{
       },
     });
 
+  const getShareUrl = () => {
+    if (typeof window !== "undefined") {
+      return `${window.location.origin}/schema/${schemaId}?token=${data?.token}`;
+    }
+    // Fallback for SSR
+    return `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/schema/${schemaId}?token=${data?.token}`;
+  };
+
   return (
     <DialogContent>
       <DialogHeader>
@@ -52,10 +60,7 @@ const ShareSchemaDialogContent: FC<{
               <Button
                 onClick={async () =>
                   await navigator.clipboard
-                    .writeText(
-                      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-                      `https://prisma-editor.vercel.app/schema/${schemaId}?token=${data.token}`
-                    )
+                    .writeText(getShareUrl())
                     .then(() => onOperationDone())
                 }
               >

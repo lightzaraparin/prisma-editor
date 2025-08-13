@@ -12,10 +12,20 @@ const MyApp: AppType<{ session: Session | null }> = ({
   Component,
   pageProps: { session, ...pageProps },
 }) => {
-  const title = "Prisma Editor | Visualize and Edit Prisma Schemas";
+  const title = "Evelan Prisma Editor | Professional Prisma Schema Editor";
   const description =
-    "Prisma Editor: Prisma Schema Editor, Prisma Schema visualization, visualize and edit Prisma schemas.";
-  const url = "https://prisma-editor.vercel.app";
+    "Evelan Prisma Editor: Professional Prisma Schema Editor and visualization tool. Built for growth-oriented businesses and professional developers.";
+  
+  // Dynamic URL generation
+  const getBaseUrl = () => {
+    if (typeof window !== "undefined") {
+      return window.location.origin;
+    }
+    return process.env.NEXT_PUBLIC_APP_URL || process.env.NEXTAUTH_URL || 'http://localhost:3000';
+  };
+  
+  const url = getBaseUrl();
+  
   return (
     <>
       <DefaultSeo
@@ -29,15 +39,15 @@ const MyApp: AppType<{ session: Session | null }> = ({
           siteName: title,
         }}
         twitter={{
-          handle: "@prisma_editor",
-          site: "@prisma_editor",
+          handle: "@evelan_gmbh",
+          site: "@evelan_gmbh",
           cardType: "summary_large_image",
         }}
         additionalMetaTags={[
           {
             name: "keywords",
             content:
-              "prisma visualizer, Prisma Editor, prisma schema generator, prisma schema builder, Prisma.io, Prisma Schema, prisma editor online, Prisma Schema Editor, Prisma schema visualization, Prisma schema editing, Database schema editor, Visual database schema design, Prisma schema generator, SQL generation from Prisma schema, PostgreSQL, MySQL, SQL Server, SQLite, MongoDB, CockroachDB",
+              "Evelan Prisma Editor, professional prisma visualizer, enterprise schema editor, business database design, Prisma schema generator, prisma schema builder, Prisma.io, Prisma Schema, prisma editor online, Prisma Schema Editor, Prisma schema visualization, Prisma schema editing, Database schema editor, Visual database schema design, SQL generation from Prisma schema, PostgreSQL, MySQL, SQL Server, SQLite, MongoDB, CockroachDB, Evelan GmbH",
           },
         ]}
       />
